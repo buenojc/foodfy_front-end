@@ -1,0 +1,8 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+.wrapper-page {
+  max-width: 70%;
+  margin: 0 auto;
+  font-family: "Roboto", sans-serif;
+  color: var(--color-text);
+}

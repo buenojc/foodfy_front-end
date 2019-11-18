@@ -1,0 +1,30 @@
+.header {
+  margin: 40px 0;
+  line-height: 30px;
+}
+
+.header > .menu,
+.header > .logo,
+.header > .menu {
+  display: inline-block;
+}
+
+.header > .logo {
+  margin-right: 123px;
+}
+
+.header > .logo img {
+  vertical-align: middle;
+}
+
+.header > .menu .action {
+  margin-right: 30px;
+  text-decoration: none;
+  color: var(--color-title);
+  font-size: 16px;
+  vertical-align: sub;
+}
+
+.header > .menu .action.-last {
+  margin-right: 0;
+}
