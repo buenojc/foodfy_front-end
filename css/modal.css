@@ -17,6 +17,7 @@
   background-color: #fff;
   width: 45%;
   height: 70%;
+  min-height: 420px;
   box-sizing: border-box;
   border-radius: 16px;
   text-align: center;
@@ -39,6 +40,7 @@
 .modal-wrapper p {
   font-size: 18px;
   color: var(--color-medium-gray);
+  margin-bottom: 120px;
 }
 
 .modal-wrapper a {
