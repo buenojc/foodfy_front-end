@@ -1,0 +1,36 @@
+.cards-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+.cards-container > .card {
+  cursor: pointer;
+}
+
+.cards-container > h2 {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 28px;
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.cards-container > .card img {
+  border-radius: 15px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.cards-container .title {
+  font-size: 18px;
+  line-height: 21px;
+  margin-bottom: 5px;
+}
+
+.cards-container .chef {
+  font-size: 14px;
+  color: var(--color-subtitles);
+  margin-bottom: 10px;
+}
