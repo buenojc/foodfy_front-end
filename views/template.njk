@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, user-scalable=no"/>
+    <link rel="stylesheet" href="/css/reset.css"/>
+    <link rel="stylesheet" href="/css/colors.css"/>
+    <link rel="stylesheet" href="/css/base.css"/>
+    <link rel="stylesheet" href="/css/header.css"/>
+    <link rel="stylesheet" href="/css/footer.css"/>
+
+    {% block head %}{% endblock %}
+
+  </head>
+  <body>
+    <div class="wrapper-page">
+      <div class="header">
+        <a href="/" class="logo">
+          <img src="/assets/logo.png" alt="Logo foodyfy"/>
+        </a>
+
+        <nav class="menu">
+          <a class="action" href="/sobre">Sobre</a>
+          <a class="action -last" href="/receitas">Receitas</a>
+        </nav>
+      </div>
+
+      {% block content %}{% endblock %}
+      <footer class="footer">
+        <p>Todos os direitos reservados, Receitas Foodfy</p>
+      </footer>
+
+      <div class="modal-wrapper">
+        <div class="modal">
+          <img src="" alt=""/>
+          <h3 class="title"></h3>
+          <p class="chef"></p>
+          <a class="close">Fechar modal</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="/js/modal.js"></script>
+  </body>
+</html>
