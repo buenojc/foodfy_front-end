@@ -1,8 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 
 .wrapper-page {
-  max-width: 70%;
-  margin: 0 auto;
   font-family: "Roboto", sans-serif;
+}
+
+.wrapper-content {
+  min-height: calc(100vh - 100px);
+  max-width: 65%;
+  margin: 0 auto;
   color: var(--color-text);
 }

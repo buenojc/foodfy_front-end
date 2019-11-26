@@ -21,53 +21,20 @@
   <section class="cards-container">
     <h2>Mais acessadas</h2>
 
-    <article class="card">
-      <img src="/assets/burger.png" alt="foto do hamburguer"/>
-      <div class="content">
-        <h3 class="title">Tripo bacon burger</h3>
-        <p class="chef">por Jorge Relato</p>
-      </div>
-    </article>
+    {% for recipe in recipes %}
 
-    <article class="card">
-      <img src="/assets/pizza.png" alt="foto da pizza"/>
-      <div class="content">
-        <h3 class="title">Pizza 4 estações</h3>
-        <p class="chef">por Fabiana Melo</p>
-      </div>
-    </article>
+      {% if loop.index <= 6 %}
+        <article class="card">
+          <img src="{{recipe.image}}" alt="Foto de {{recipe.title}}"/>
+          <div class="content">
+            <h3 class="title">{{recipe.title}}</h3>
+            <p class="chef">{{recipe.author}}</p>
+          </div>
+        </article>
+        {%endif%}
 
-    <article class="card">
-      <img src="/assets/espaguete.png" alt="foto do espaguete"/>
-      <div class="content">
-        <h3 class="title">Espaguete ao alho</h3>
-        <p class="chef">por Júlia Kinoto</p>
-      </div>
-    </article>
+        {%endfor%}
 
-    <article class="card">
-      <img src="/assets/lasanha.png" alt="foto da lasanha"/>
-      <div class="content">
-        <h3 class="title">Lasanha mac n' cheese</h3>
-        <p class="chef">por Juliano Vieira</p>
-      </div>
-    </article>
+      </section>
 
-    <article class="card">
-      <img src="/assets/doce.png" alt="foto dos doces"/>
-      <div class="content">
-        <h3 class="title">Docinhos pão-do-céu</h3>
-        <p class="chef">por Ricardo Golvea</p>
-      </div>
-    </article>
-
-    <article class="card">
-      <img src="/assets/asinhas.png" alt="fotos das asinhas"/>
-      <div class="content">
-        <h3 class="title">Asinhas de frango ao barbecue</h3>
-        <p class="chef">por Vania Steroski</p>
-      </div>
-    </article>
-  </section>
-
-{% endblock %}
+    {% endblock %}
