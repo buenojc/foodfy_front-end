@@ -1,0 +1,61 @@
+{% extends "template.njk" %}
+
+{% block head %}
+    <title>{{recipe.title}}
+        - Foodfy</title>
+    <link rel="stylesheet" href="/css/banner.css"/>
+    <link rel="stylesheet" href="/css/cards-container.css"/>
+    <link rel="stylesheet" href="/css/modal.css"/>
+    <link rel="stylesheet" href="/css/recipe-wrapper.css">
+    <link rel="stylesheet" href="/css/recipe.css">
+
+{% endblock %}
+
+{% block content %}
+    <div class="recipe-wrapper">
+        <div class="recipe-header">
+            <img src="{{recipe.image}}" alt="Foto de {{recipe.title}}"/>
+            <h3 class="title">{{recipe.title}}</h3>
+            <p class="chef">Por
+                {{recipe.author}}</p>
+
+        </div>
+
+        <div class="recipe">
+            <article class="info-recipe">
+                <h4 class="title">Ingredientes</h4>
+                <p class="btn">Esconder</p>
+                <ul class="information">
+                    {% for ingredient in recipe.ingredients %}
+
+                        <li>{{ingredient}}</li>
+
+                        {% endfor%}
+                    </ul>
+                </article>
+
+                <article class="info-recipe">
+                    <h4 class="title">Modo de preparo</h4>
+                    <p class="btn">Esconder</p>
+                    <ul class="information">
+                        {% for preparation in recipe.preparation %}
+
+                            <li>{{preparation}}</li>
+
+                            {% endfor%}
+                        </ul>
+                    </article>
+
+                    <article class="info-recipe -last">
+                        <h4 class="title">Informações adicionais</h4>
+                        <p class="btn">Esconder</p>
+                        <p class="information">{{recipe.information}}</p>
+                    </article>
+                </div>
+            </div>
+
+        {% endblock %}
+
+        {% block scripts %}
+            <script src="/js/scripts.js"></script>
+        {% endblock %}
